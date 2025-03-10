@@ -9,6 +9,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>personal portfolio Website</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        .skills-tab {
+            display: none; 
+        }
+    </style>
+    <script src="https://kit.fontawesome.com/6e99247721.js" crossorigin="anonymous"></script>
 </head>
 <body>
 <div id="header">
@@ -24,15 +30,124 @@
             </ul>
         </nav>
         <div class="header-text">
-            <p>DESIGNER</p>
-            <h1><b>Hi,I'm <span>Kevin</span> <br/>jen From Australia</b></h1>
+            <p>DEVELOPER</p>
+            <h1><b>Hi,I'm <span>Kiran</span> <br/>Sai From India</b></h1>
         </div>
     </div>
 </div>
+<!-------about--------->
 <div id="about">
-    <div class="row">
-        <div></div>
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="images/user.png">
+            </div>
+            <div class="about-col-2">
+                <h1 class="sub-title">About Me</h1>
+                <p>I am Kovvuru Kiran Sai, a second-year CSE student at Lendi Institute of Engineering and Technology. I completed my schooling at Fort City School, Vizianagaram, with a 10/10 GPA and excelled in my intermediate studies at Sri Chaitanya College.
+                    I am passionate about public speaking, winning multiple elocution competitions. I enjoy video editing as both a hobby and a skill-building activity, along with drawing. Fluent in English, Hindi, and Telugu, I am a confident communicator.
+                    I have completed learning Python, Java, HTML, CSS, and Data Structures, continuously expanding my technical expertise.</p>
+                <button class="button1" onclick="display('skills')">Skills</button>
+                <button class="button2" onclick="display('education')">Education</button>
+                <button class="button2" onclick="display('experience')">Experience</button>
+
+                <div class="skills-tab" id="skills">
+                    <ul>
+                        <li><span class="heading-sub"><b>Project</b></span><br>Designing PORTFOLIO Website</li>
+                        <li>Web Development<br>HTML<br>CSS</li>
+                    </ul>
+                </div>
+
+                <div class="skills-tab" id="education">
+                    <ul>
+                        <li><span class="heading-sub">2021</span><br>Completed my schooling at Fort City School</li>
+                        <li><span class="heading-sub">2023</span><br>Completed my intermediate</li>
+                    </ul>
+                </div>
+                <div class="skills-tab" id="experience">
+                    <ul>
+                        <li><span class="heading-sub"><b>Experience</b></span><br>One year of experience</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
+<!-----------------------services--------------------------->
+<div id="services">
+    <div class="container">
+        <h1 class="sub-title">My services</h1>
+        <div class="services-list">
+            <div class="box1">
+                <i class="fa-solid fa-code"></i>
+                <h2>Web Design</h2>
+                <p style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">Lorem ipsum dolar sit amet, consectetur adipiscing elit.sed nulla nibh,tincidunt sit amet sapien quis.</p>
+                <a href="#">Learn more</a>
+            </div>
+            <div class="box1">
+                <i class="fa-solid fa-crop"></i>
+                <h2>UI/UX Design</h2>
+                <p style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">Lorem ipsum dolar sit amet, consectetur adipiscing elit.sed nulla nibh,tincidunt sit amet sapien quis.</p>
+                <a href="#">Learn more</a>
+            </div>
+            <div class="box1">
+                <i class="fa-brands fa-app-store-ios"></i>
+                <h2>App Design</h2>
+                <p style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">Lorem ipsum dolar sit amet, consectetur adipiscing elit.sed nulla nibh,tincidunt sit amet sapien quis.</p>
+                <a href="#">Learn more</a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-----------portfolio---------->
+
+<div id="portfolio">
+    <div class="container">
+        <h1 class="sub-title">My work</h1>
+        <div class="worklist">
+            <div class="work">
+                <img src="images/work-1.png" class="image">
+                <div class="layer">
+                    <h3>Portfolio of about me</h3>
+                    <p>this app connets u to different people.oh my god there are so many people </p>
+                    <a href="#"><i class="fa-solid fa-link"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="images/work-2.png" class="image">
+                <div class="layer">
+                    <h3>Farmer Consumer App</h3>
+                    <p>this app connets u to different people.oh my god there are so many people </p>
+                    <a href="#"><i class="fa-solid fa-link"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="images/work-3.png" class="image">
+                <div class="layer">
+                    <h3>Netflix App</h3>
+                    <p>this app connets u to different people.oh my god there are so many people </p>
+                    <a href="#"><i class="fa-solid fa-link"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script>
+    function display(sectionId) {
+        // Hide all sections
+        let sections = document.querySelectorAll('.skills-tab');
+        sections.forEach(section => {
+            section.style.display = 'none';
+        });
+
+        // Show only the selected section
+        let selectedSection = document.getElementById(sectionId);
+        if (selectedSection) {
+            selectedSection.style.display = 'block';
+        }
+    }
+</script>
 </body>
 </html>
